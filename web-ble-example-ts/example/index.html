@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script type="module">
+            import { bleExampleStart, bleExampleStop } from './index.js';
+            window.bleExampleStart = bleExampleStart;
+            window.bleExampleStop = bleExampleStop;
+        </script>
+    </head>
+
+    <body style="padding: 50px;">
+        <button onclick="bleExampleStart()">Start</button> | <button onclick="bleExampleStop()">Stop</button>
+
+        <div id="temps" style="padding-top: 10px; visibility: hidden;">
+            Last Update: <span id="lut"></span> <br/>
+            Current Reading: <span id="reading"></span>°F <br/>
+            Last log seq: <span id="lls"></span> Last Reading Count: <span id="lrc"></span> Battery: <span id="bsa"></span>
+        </div>
+
+        <hr  style="margin-top: 20px; margin-bottom: 20px;"/>
+
+        <div>
+            <label>Output</label>
+
+            <ul id="log-output">                
+            </ul>
+        </div>
+    </body>
+</html>
